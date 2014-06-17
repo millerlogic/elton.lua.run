@@ -1,28 +1,28 @@
-	chunk = [tableconstructor, ","], tableconstructor;
+chunk = [tableconstructor, ","], tableconstructor;
 
-	explist = {exp, ","}, exp;
+explist = {exp, ","}, exp;
 
-	boolean = "true" | "false";
+boolean = "true" | "false";
 
-	digit = "0" | "1" | "2" | "3" | "4" | "5" | "6" | "7" | "8" | "9";
+digit = "0" | "1" | "2" | "3" | "4" | "5" | "6" | "7" | "8" | "9";
 
-	(* TODO: scientific notation *)
-	number = ["-"], digit, {digit};
+(* TODO: scientific notation *)
+number = ["-"], digit, {digit};
 
-	(* TODO: define string types and escapes *)
-	string = '"', string_characters, '"';
+(* TODO: define string types and escapes *)
+string = '"', string_characters, '"';
 
-	(* TODO: exclude keywords like: if, then, else, while, do, ... *)
-	namefirst = letter | "_";
-	namerest = letter | "_" | digit;
-	name = namefirst, {namerest};
+(* TODO: exclude keywords like: if, then, else, while, do, ... *)
+namefirst = letter | "_";
+namerest = letter | "_" | digit;
+name = namefirst, {namerest};
 
-	exp =  "nil" | boolean | number | string | tableconstructor;
+exp =  "nil" | boolean | number | string | tableconstructor;
 
-	tableconstructor = "{", [fieldlist], "}";
+tableconstructor = "{", [fieldlist], "}";
 
-	fieldlist = field, {fieldsep, field}, [fieldsep];
+fieldlist = field, {fieldsep, field}, [fieldsep];
 
-	field = "[", exp, "]", "=", exp | name, "=", exp | exp;
+field = "[", exp, "]", "=", exp | name, "=", exp | exp;
 
-	fieldsep = "," | ";";
+fieldsep = "," | ";";
