@@ -1,6 +1,4 @@
-	chunk = [toptable, ","], toptable;
-
-	toptable = "{", [explist], "}";
+	chunk = [tableconstructor, ","], tableconstructor;
 
 	explist = {exp, ","}, exp;
 
