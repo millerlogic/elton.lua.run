@@ -31,22 +31,38 @@
                 <p>Elton is a strictly defined subset of Lua. The syntax is simple.</p>
 
                 <h4>Not just for the computer</h4>
-                <p>It's easy to edit Elton data. Unlike JSON, Elton has syntax for comments.</p>
+                <p>It's easy for people to edit Elton data.</p>
 
                 <h4>Liberal license</h4>
                 <p>The official library and specification is available under the terms of the MIT license, same as Lua.</p>
             </div>
 
             <div class="col-lg-6">
-                <h4>Subheading</h4>
-                <p>Really good stuff.</p>
+                <h4>International</h4>
+                <p>Elton data is always valid UTF-8. By requiring UTF-8 a lot of problems simply go away.</p>
 
-                <h4>Subheading</h4>
-                <p>Really good stuff.</p>
+                <h4>Versatile</h4>
+                <p>Use it for your application's config format. Unlike JSON, Elton supports comments.</p>
 
-                <h4>Subheading</h4>
-                <p>Really good stuff.</p>
+                <h4>Safety</h4>
+                <p>Lua is easily sandboxed which makes Elton safe to use. The official Lua Elton library takes care of safety for you.</p>
             </div>
+        </div>
+
+        <div class="row">
+            <div class="highlight"><pre><span class="c1">-- A simple blog entry using Elton.</span>
+<span class="p">{</span>
+  <span class="n">date</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="s">2014-03-14 13:32&quot;</span><span class="p">,</span>
+  <span class="n">title</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="s">An example Elton document&quot;</span><span class="p">,</span>
+  <span class="n">tags</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;</span><span class="s">test&quot;</span><span class="p">,</span> <span class="s2">&quot;</span><span class="s">example&quot;</span><span class="p">},</span>
+  <span class="n">post</span> <span class="o">=</span> <span class="s">[[</span>
+<span class="s">    Example</span>
+<span class="s">    =======</span>
+
+<span class="s">    Lorem ipsum dolor sit amet...</span>
+<span class="s">  ]]</span>
+<span class="p">}</span>
+</pre></div>
         </div>
 
         <div class="footer">
